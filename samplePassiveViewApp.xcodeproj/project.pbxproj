@@ -12,6 +12,9 @@
 		82765657227571E8009A9E4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82765655227571E8009A9E4C /* Main.storyboard */; };
 		82765659227571EA009A9E4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82765658227571EA009A9E4C /* Assets.xcassets */; };
 		8276565C227571EA009A9E4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8276565A227571EA009A9E4C /* LaunchScreen.storyboard */; };
+		8276566F22757BC2009A9E4C /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8276566E22757BC2009A9E4C /* Repository.swift */; };
+		8276567122757BE6009A9E4C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8276567022757BE6009A9E4C /* User.swift */; };
+		8276567322757BFF009A9E4C /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8276567222757BFF009A9E4C /* AccessToken.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		82765658227571EA009A9E4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8276565B227571EA009A9E4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8276565D227571EA009A9E4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8276566E22757BC2009A9E4C /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		8276567022757BE6009A9E4C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8276567222757BFF009A9E4C /* AccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessToken.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +154,9 @@
 		8276566D22757A05009A9E4C /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				8276566E22757BC2009A9E4C /* Repository.swift */,
+				8276567022757BE6009A9E4C /* User.swift */,
+				8276567222757BFF009A9E4C /* AccessToken.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -223,8 +232,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8276567122757BE6009A9E4C /* User.swift in Sources */,
 				82765654227571E8009A9E4C /* ViewController.swift in Sources */,
 				82765652227571E8009A9E4C /* AppDelegate.swift in Sources */,
+				8276566F22757BC2009A9E4C /* Repository.swift in Sources */,
+				8276567322757BFF009A9E4C /* AccessToken.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
