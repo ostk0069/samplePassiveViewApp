@@ -54,14 +54,102 @@
 		82765650227571E8009A9E4C /* samplePassiveViewApp */ = {
 			isa = PBXGroup;
 			children = (
-				82765651227571E8009A9E4C /* AppDelegate.swift */,
-				82765653227571E8009A9E4C /* ViewController.swift */,
-				82765655227571E8009A9E4C /* Main.storyboard */,
+				8276566D22757A05009A9E4C /* Entity */,
+				8276566422757900009A9E4C /* Infra */,
+				82765663227578EF009A9E4C /* View */,
 				82765658227571EA009A9E4C /* Assets.xcassets */,
 				8276565A227571EA009A9E4C /* LaunchScreen.storyboard */,
 				8276565D227571EA009A9E4C /* Info.plist */,
 			);
 			path = samplePassiveViewApp;
+			sourceTree = "<group>";
+		};
+		82765663227578EF009A9E4C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				82765651227571E8009A9E4C /* AppDelegate.swift */,
+				8276566A2275796A009A9E4C /* ViewController */,
+				8276566922757962009A9E4C /* Cell */,
+				8276566822757954009A9E4C /* Github */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8276566422757900009A9E4C /* Infra */ = {
+			isa = PBXGroup;
+			children = (
+				8276566722757946009A9E4C /* Response */,
+				827656662275793C009A9E4C /* Request */,
+				8276566522757930009A9E4C /* Session */,
+			);
+			path = Infra;
+			sourceTree = "<group>";
+		};
+		8276566522757930009A9E4C /* Session */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		827656662275793C009A9E4C /* Request */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		8276566722757946009A9E4C /* Response */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		8276566822757954009A9E4C /* Github */ = {
+			isa = PBXGroup;
+			children = (
+				8276566C227579D5009A9E4C /* ViewController */,
+				8276566B227579C1009A9E4C /* Cell */,
+			);
+			path = Github;
+			sourceTree = "<group>";
+		};
+		8276566922757962009A9E4C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		8276566A2275796A009A9E4C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				82765653227571E8009A9E4C /* ViewController.swift */,
+				82765655227571E8009A9E4C /* Main.storyboard */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8276566B227579C1009A9E4C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		8276566C227579D5009A9E4C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8276566D22757A05009A9E4C /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
