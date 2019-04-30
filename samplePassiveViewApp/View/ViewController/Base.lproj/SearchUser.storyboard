@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search User View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SearchUserViewController" customModule="samplePassiveViewApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="q41-WQ-Qxs">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mc5-yf-o1f">
+                                <rect key="frame" x="0.0" y="100" width="414" height="796"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="q41-WQ-Qxs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0mM-hn-Y0P"/>
+                            <constraint firstItem="mc5-yf-o1f" firstAttribute="top" secondItem="q41-WQ-Qxs" secondAttribute="bottom" id="HH9-y5-RlU"/>
+                            <constraint firstItem="q41-WQ-Qxs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iT6-uu-olB"/>
+                            <constraint firstItem="mc5-yf-o1f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="m5q-b9-YDI"/>
+                            <constraint firstItem="mc5-yf-o1f" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="pMo-uf-Cco"/>
+                            <constraint firstItem="q41-WQ-Qxs" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="vqN-dM-A6G"/>
+                            <constraint firstItem="mc5-yf-o1f" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="zgc-w6-nhN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="q41-WQ-Qxs" id="Z2I-yi-YYJ"/>
+                        <outlet property="tableView" destination="mc5-yf-o1f" id="Bfy-uv-Y2h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="125.89285714285714"/>
+        </scene>
+    </scenes>
+</document>

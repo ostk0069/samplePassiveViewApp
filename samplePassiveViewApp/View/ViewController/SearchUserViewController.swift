@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SearchUserViewController.swift
 //  samplePassiveViewApp
 //
 //  Created by Takuma Osada on 2019/04/28.
@@ -8,11 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SearchUserViewController: UIViewController {
 
+  @IBOutlet weak var searchBar: UISearchBar!
+  @IBOutlet weak var tableView: UITableView!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
   }
 
 
