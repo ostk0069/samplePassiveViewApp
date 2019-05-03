@@ -8,12 +8,12 @@
 
 import UIKit
 
-class SearchUserViewController: UIViewController {
+final class SearchUserViewController: UIViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
 
-    private var presenter: SearchUserPresenterInput
+    private var presenter: SearchUserPresenterInput!
 
     func inject(presenter: SearchUserPresenterInput) {
         self.presenter = presenter
@@ -75,6 +75,6 @@ extension SearchUserViewController: SearchUserPresenterOutput {
         let userDetailVC = UIStoryboard(
             name: "UserDetail",
             bundle: nil
-            ).instantiateInitialViewController()
+            ).instantiateInitialViewController() as! UserDetailViewController
     }
 }
