@@ -83,8 +83,6 @@ extension SearchUserViewController: SearchUserPresenterOutput {
             model: model
         )
         userDetailVC.inject(presenter: presenter)
-        
         navigationController?.pushViewController(userDetailVC, animated: true)
-        
     }
 }
