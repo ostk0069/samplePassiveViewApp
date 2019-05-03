@@ -30,6 +30,12 @@
 		82A618962278378300271D25 /* SearchUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A618952278378300271D25 /* SearchUserModel.swift */; };
 		82A6189A227837D900271D25 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A61898227837D900271D25 /* UserCell.swift */; };
 		82A6189B227837D900271D25 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82A61899227837D900271D25 /* UserCell.xib */; };
+		82A6189D227C10F500271D25 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A6189C227C10F500271D25 /* UserDetailViewController.swift */; };
+		82A6189F227C110300271D25 /* UserDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82A6189E227C110300271D25 /* UserDetail.storyboard */; };
+		82A618A2227C112A00271D25 /* UserDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A618A1227C112A00271D25 /* UserDetailModel.swift */; };
+		82A618A4227C113900271D25 /* UserDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A618A3227C113900271D25 /* UserDetailPresenter.swift */; };
+		82A618A7227C116200271D25 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A618A5227C116200271D25 /* RepositoryCell.swift */; };
+		82A618A8227C116200271D25 /* RepositoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82A618A6227C116200271D25 /* RepositoryCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +64,12 @@
 		82A618952278378300271D25 /* SearchUserModel.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = SearchUserModel.swift; sourceTree = "<group>"; tabWidth = 4; };
 		82A61898227837D900271D25 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		82A61899227837D900271D25 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		82A6189C227C10F500271D25 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		82A6189E227C110300271D25 /* UserDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserDetail.storyboard; sourceTree = "<group>"; };
+		82A618A1227C112A00271D25 /* UserDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailModel.swift; sourceTree = "<group>"; };
+		82A618A3227C113900271D25 /* UserDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailPresenter.swift; sourceTree = "<group>"; };
+		82A618A5227C116200271D25 /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
+		82A618A6227C116200271D25 /* RepositoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +115,7 @@
 		82765663227578EF009A9E4C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				82A618A0227C111300271D25 /* UserDetail */,
 				82A61897227837C400271D25 /* Cell */,
 				82A6188E227836B300271D25 /* SearchUser */,
 				82765651227571E8009A9E4C /* AppDelegate.swift */,
@@ -158,6 +171,8 @@
 			children = (
 				82765653227571E8009A9E4C /* SearchUserViewController.swift */,
 				82765655227571E8009A9E4C /* SearchUser.storyboard */,
+				82A6189C227C10F500271D25 /* UserDetailViewController.swift */,
+				82A6189E227C110300271D25 /* UserDetail.storyboard */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -186,8 +201,19 @@
 			children = (
 				82A61898227837D900271D25 /* UserCell.swift */,
 				82A61899227837D900271D25 /* UserCell.xib */,
+				82A618A5227C116200271D25 /* RepositoryCell.swift */,
+				82A618A6227C116200271D25 /* RepositoryCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		82A618A0227C111300271D25 /* UserDetail */ = {
+			isa = PBXGroup;
+			children = (
+				82A618A1227C112A00271D25 /* UserDetailModel.swift */,
+				82A618A3227C113900271D25 /* UserDetailPresenter.swift */,
+			);
+			path = UserDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +276,8 @@
 			files = (
 				82A6189B227837D900271D25 /* UserCell.xib in Resources */,
 				8276565C227571EA009A9E4C /* LaunchScreen.storyboard in Resources */,
+				82A6189F227C110300271D25 /* UserDetail.storyboard in Resources */,
+				82A618A8227C116200271D25 /* RepositoryCell.xib in Resources */,
 				82765659227571EA009A9E4C /* Assets.xcassets in Resources */,
 				82765657227571E8009A9E4C /* SearchUser.storyboard in Resources */,
 			);
@@ -266,8 +294,10 @@
 				82A6187A22759A9F00271D25 /* Session.swift in Sources */,
 				82A6188D22759AC600271D25 /* Result.swift in Sources */,
 				8276567122757BE6009A9E4C /* User.swift in Sources */,
+				82A618A4227C113900271D25 /* UserDetailPresenter.swift in Sources */,
 				82A6188222759AB500271D25 /* LoginOauthAccessTokenRequest.swift in Sources */,
 				82A6188422759AB500271D25 /* UserReposRequest.swift in Sources */,
+				82A6189D227C10F500271D25 /* UserDetailViewController.swift in Sources */,
 				82A6189A227837D900271D25 /* UserCell.swift in Sources */,
 				82A61890227836C400271D25 /* SearchUserPresenter.swift in Sources */,
 				82A6187B22759A9F00271D25 /* SessionError.swift in Sources */,
@@ -276,7 +306,9 @@
 				82765652227571E8009A9E4C /* AppDelegate.swift in Sources */,
 				82A6188722759AB500271D25 /* SearchRepositoriesRequest.swift in Sources */,
 				82A6188C22759AC600271D25 /* Pagenation.swift in Sources */,
+				82A618A7227C116200271D25 /* RepositoryCell.swift in Sources */,
 				82A618962278378300271D25 /* SearchUserModel.swift in Sources */,
+				82A618A2227C112A00271D25 /* UserDetailModel.swift in Sources */,
 				82A6188622759AB500271D25 /* RepositoryRequest.swift in Sources */,
 				8276566F22757BC2009A9E4C /* Repository.swift in Sources */,
 				8276567322757BFF009A9E4C /* AccessToken.swift in Sources */,
