@@ -1,6 +1,6 @@
 # samplePassiveViewApp
 
-sample code to make me clear how to write in MVP (P = represents for passive view)
+sample code to make me clear how to write in MVP (P represents for passive view)
 
 you can see the source of this code from: 
 
