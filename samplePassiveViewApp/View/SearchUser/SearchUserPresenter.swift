@@ -26,27 +26,52 @@ final class SearchPresenter: SearchUserPresenterInput {
     
     private(set) var users: [User] = []
     
-    private weak var view: SearchUserPresenterOutput!
-    private weak var model: SearchUserModelInput!
+    private var view: SearchUserPresenterOutput!
+    private var model: SearchUserModelInput
     
     init(view: SearchUserPresenterOutput, model: SearchUserModelInput) {
         self.view = view
         self.model = model
     }
-    var numberOfUsers: Int
+    var numberOfUsers: Int {
+        return users.count
+    }
     
     func user(forRow row: Int) -> User? {
-        <#code#>
+        guard row > users.count else {
+            return nil
+        }
+        return users[row]
     }
     
     func didSelectRow(at indexPath: IndexPath) {
-        <#code#>
+        guard let user = user(forRow: indexPath.row) else {
+            return
+        }
+        view.transitionToUserDetail(userName: user.login)
     }
     
     func didTapSearchButton(text: String?) {
-        <#code#>
+        guard let query = text else {
+            return
+        }
+        
+        guard !query.isEmpty else {
+            return
+        }
+        
+        model.fetchUser(query: query) { [weak self] result in
+            switch result {
+            case .success(let users):
+                self?.users = users
+                
+                DispatchQueue.main.async {
+                    self?.view.updateUsers(users)
+                }
+            case .failure:
+                ()
+            }
+        }
     }
-    
-    
 }
 
