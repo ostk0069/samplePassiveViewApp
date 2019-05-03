@@ -10,21 +10,42 @@ import UIKit
 
 class UserDetailViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+
+    private var presenter: UserDetailPresenterInput!
+
+    func inject(presenter: UserDetailPresenterInput) {
+        self.presenter = presenter
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setUp()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setUp() {
+        tableView.estimatedRowHeight = 64
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.register(UINib(nibName: "RepositoryCell", bundle: nil), forCellReuseIdentifier: "RepositoryCell")
     }
-    */
+}
 
+extension UserDetailViewController: UITableViewDataSource {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return presenter.repositories.count
+    }
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RepositoryCell") as! RepositoryCell
+        if let repository = presenter.repository(forRow: indexPath.row) {
+            cell.configure(repository: repository)
+        }
+        return cell
+    }
+}
+
+extension UserDetailViewController: UserDetailPresenterOutput {
+    func updateRepositories(_ repositories: [Repository]) {
+        tableView.reloadData()
+    }
 }

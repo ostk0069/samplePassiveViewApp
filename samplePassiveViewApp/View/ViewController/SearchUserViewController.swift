@@ -76,5 +76,15 @@ extension SearchUserViewController: SearchUserPresenterOutput {
             name: "UserDetail",
             bundle: nil
             ).instantiateInitialViewController() as! UserDetailViewController
+        let model = UserDetailModel(name: userName)
+        let presenter = UserDetailPresenter(
+            name: userName,
+            view: userDetailVC,
+            model: model
+        )
+        userDetailVC.inject(presenter: presenter)
+        
+        navigationController?.pushViewController(userDetailVC, animated: true)
+        
     }
 }
